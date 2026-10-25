@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spoken Nursing Care Plan: Bedside Dialogue & Procedure Matrix</title>
+  <title>Spoken Nursing Care Plan: Randomized Multi-Stakeholder Dialogue Matrix</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Canvas Confetti CDN -->
@@ -33,7 +33,7 @@
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-3">
       <div>
         <h1 class="text-xl md:text-2xl font-extrabold text-amber-400 tracking-wide flex items-center gap-2">
-          🩺 Bedside Dialogue & Procedure Challenge
+          🏥 Randomized Multi-Stakeholder Dialogue Matrix
         </h1>
         <p class="text-xs text-slate-400">Curriculum & Framework: <span class="text-teal-300 font-semibold">Giyono Asfarrasyid</span></p>
       </div>
@@ -66,7 +66,7 @@
       <div class="flex items-center gap-2">
         <label for="moduleSelect" class="text-sm font-semibold text-slate-300">Jump to Clinical Module:</label>
         <select id="moduleSelect" class="bg-slate-900 border border-slate-600 text-amber-300 text-sm rounded-lg p-2 focus:ring-2 focus:ring-amber-400 outline-none">
-          <option value="all">All 20 Modules (Comprehensive Dialogue Challenge)</option>
+          <option value="all">All 20 Modules (Randomized Challenge)</option>
           <option value="1">Modules 1-5: Assessment, Vitals, ISBAR, Meds</option>
           <option value="6">Modules 6-10: Treatments, Handover, HR, Peds, ICU</option>
           <option value="11">Modules 11-15: Isolation, Discharge, Surgery, Psych, Onco</option>
@@ -84,7 +84,7 @@
       </div>
     </section>
 
-    <!-- SCENARIO CARD & DIALOGUE MATRIX -->
+    <!-- SCENARIO CARD & 3-PART CONVERSATION MATRIX -->
     <section class="bg-slate-800/90 rounded-2xl p-6 border border-slate-700 shadow-xl relative overflow-hidden space-y-6">
       
       <!-- TOP BADGES -->
@@ -94,9 +94,9 @@
         </span>
         <div class="flex items-center gap-2">
           <span class="bg-teal-900/80 text-teal-300 text-xs font-bold px-3 py-1 rounded-full border border-teal-500/40 uppercase">
-            Conversational Register Challenge
+            3-Part Conversational Register Challenge
           </span>
-          <span class="text-xs text-slate-400">👨 Male Voice (Dialogue) | 👩 Female Voice (Formal Options)</span>
+          <span class="text-xs text-slate-400">👨 Male Voice (Dialogue) | 👩 Female Voice (Options)</span>
         </div>
       </div>
 
@@ -105,33 +105,39 @@
         "Visual setting..."
       </div>
 
-      <!-- REAL CONVERSATION EXCHANGE (MALE VOICE) -->
+      <!-- 3-PART CONVERSATION EXCHANGE (MALE VOICE) -->
       <div class="bg-slate-950/90 p-5 rounded-2xl border border-slate-700 relative shadow-inner space-y-3">
         <div class="flex items-center justify-between">
-          <span class="text-xs uppercase font-extrabold text-amber-400 tracking-wider">💬 Real Bedside Conversation Exchange:</span>
-          <button id="speakDialogueBtn" class="bg-amber-500/20 hover:bg-amber-500/40 text-amber-300 border border-amber-500/50 p-2 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0" title="Listen to Dialogue">
-            👨🔊 <span class="hidden md:inline">Listen Exchange</span>
+          <span class="text-xs uppercase font-extrabold text-amber-400 tracking-wider">💬 3-Part Bedside Dialogue Exchange:</span>
+          <button id="speakDialogueBtn" class="bg-amber-500/20 hover:bg-amber-500/40 text-amber-300 border border-amber-500/50 p-2 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0" title="Listen to Full Exchange">
+            👨🔊 <span class="hidden md:inline">Listen Full Exchange</span>
           </button>
         </div>
 
-        <!-- Speaker A -->
+        <!-- Part 1 -->
         <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 flex items-start gap-3">
-          <span class="text-xs font-bold bg-amber-900/80 text-amber-300 px-2.5 py-1 rounded-full uppercase tracking-wider flex-shrink-0" id="speakerATitle">Patient</span>
-          <p id="speakerALine" class="text-sm md:text-base font-semibold text-amber-200">"Dialogue line A..."</p>
+          <span class="text-xs font-bold bg-purple-900/80 text-purple-300 px-2 py-0.5 rounded-full uppercase tracking-wider flex-shrink-0" id="part1Title">Part 1</span>
+          <p id="part1Text" class="text-sm md:text-base font-semibold text-purple-200">"Dialogue part 1..."</p>
         </div>
 
-        <!-- Speaker B (Nurse Prompt) -->
-        <div class="bg-teal-950/40 p-3 rounded-xl border border-teal-800/60 flex items-start gap-3">
-          <span class="text-xs font-bold bg-teal-900/80 text-teal-300 px-2.5 py-1 rounded-full uppercase tracking-wider flex-shrink-0" id="speakerBTitle">Nurse Challenge</span>
-          <p id="speakerBLine" class="text-sm md:text-base font-bold text-teal-200">"Nurse response prompt..."</p>
+        <!-- Part 2 -->
+        <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 flex items-start gap-3">
+          <span class="text-xs font-bold bg-teal-900/80 text-teal-300 px-2 py-0.5 rounded-full uppercase tracking-wider flex-shrink-0" id="part2Title">Part 2</span>
+          <p id="part2Text" class="text-sm md:text-base font-semibold text-teal-200">"Dialogue part 2..."</p>
+        </div>
+
+        <!-- Part 3 -->
+        <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 flex items-start gap-3">
+          <span class="text-xs font-bold bg-amber-900/80 text-amber-300 px-2 py-0.5 rounded-full uppercase tracking-wider flex-shrink-0" id="part3Title">Part 3</span>
+          <p id="part3Text" class="text-sm md:text-base font-semibold text-amber-200">"Dialogue part 3..."</p>
         </div>
       </div>
 
-      <!-- HOW-TO / PROCEDURAL STEP INTEGRATION -->
+      <!-- HOW-TO PROCEDURAL PROTOCOL -->
       <div class="bg-sky-950/40 border border-sky-700/50 p-3 rounded-xl flex items-center justify-between">
         <div>
-          <span class="text-xs uppercase font-bold text-sky-300 block">⚙️ Procedural "How-To" Context:</span>
-          <p id="proceduralStepText" class="text-xs md:text-sm font-semibold text-slate-200 mt-0.5">Procedural step description...</p>
+          <span class="text-xs uppercase font-bold text-sky-300 block">⚙️ Clinical "How-To" Protocol:</span>
+          <p id="proceduralStepText" class="text-xs md:text-sm font-semibold text-slate-200 mt-0.5">Procedural protocol description...</p>
         </div>
         <button id="speakHowToBtn" class="bg-sky-500/20 hover:bg-sky-500/40 text-sky-300 border border-sky-500/50 p-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0">
           👩🔊 How-To
@@ -141,14 +147,14 @@
       <!-- CHALLENGE INSTRUCTION -->
       <div class="bg-teal-950/40 border border-teal-700/50 p-3 rounded-xl flex items-center justify-between">
         <p id="challengeInstruction" class="text-sm font-semibold text-teal-200">
-          ⚠️ Select ALL correct formal clinical nursing responses that correctly answer or document this exchange:
+          ⚠️ Select ALL correct formal clinical nursing responses or documentation entries matching this dialogue exchange:
         </p>
         <button id="speakInstructionBtn" class="bg-teal-500/20 hover:bg-teal-500/40 text-teal-300 border border-teal-500/50 p-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0">
           👩🔊 Read
         </button>
       </div>
 
-      <!-- MULTI-CHOICE OPTIONS MATRIX (FEMALE VOICE) -->
+      <!-- RANDOMIZED MULTI-CHOICE OPTIONS MATRIX (FEMALE VOICE) -->
       <div id="optionsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <!-- Options rendered dynamically -->
       </div>
@@ -165,7 +171,7 @@
         <div id="feedbackText"></div>
         <div id="feedbackSubtext" class="text-xs font-normal mt-1"></div>
         <button id="nextScenarioBtn" class="mt-3 bg-slate-900 text-white text-sm px-6 py-2.5 rounded-lg border border-slate-600 hover:bg-slate-800 transition">
-          Next Bedside Scenario ➔
+          Next Stakeholder Scenario ➔
         </button>
       </div>
 
@@ -175,7 +181,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-slate-950 border-t border-slate-800 p-4 text-center text-xs text-slate-500">
-    <p>Spoken English for Nursing Care Plan Training System • Bedside Dialogue & Procedure Challenge</p>
+    <p>Spoken English for Nursing Care Plan Training System • Randomized Multi-Stakeholder Dialogue Matrix</p>
     <p class="mt-1">Content & Pedagogical Framework © Giyono Asfarrasyid</p>
   </footer>
 
@@ -269,34 +275,42 @@
 
     const soundFX = new SoundEffects();
 
-    // --- 20 REAL CONVERSATIONAL DIALOGUE & PROCEDURE SCENARIOS ---
-    const conversationScenarios = [
+    // --- UTILITY: RANDOMIZE ARRAY ---
+    function shuffleArray(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- 20 RANDOMIZED 3-PART CONVERSATION SCENARIOS ---
+    const randomizedScenarios = [
       {
         id: 1,
         moduleGroup: "1",
         moduleTitle: "Module 1: Intake & Pain Assessment",
-        visual: "Admission desk. Patient arrives accompanied by their daughter.",
-        speakerA: "Patient",
-        lineA: "Nurse, I've got this crushing weight right in the middle of my chest, and it's drifting down my left arm.",
-        speakerB: "Nurse Response Challenge",
-        lineB: "How should the nurse formally assess and respond to this pain report?",
-        howTo: "Step 2 Mechanism: Auscultate heart/lungs, evaluate pain intensity using PQRST scale, and check radiation.",
+        visual: "Admission desk. Patient accompanied by anxious family member.",
+        part1: { speaker: "Patient (Informal Idiom)", text: "Nurse, my chest feels like an elephant is sitting right on top of it, and the ache is shooting down my left arm!" },
+        part2: { speaker: "Nurse Clarification", text: "Can you point exactly to where it hurts, and rate the pain intensity from 0 to 10?" },
+        part3: { speaker: "Family Member", text: "He's sweating profusely and looks pale—please check him right away!" },
+        howTo: "Step 2 Mechanism: Evaluate pain intensity using PQRST criteria and auscultate cardiovascular status.",
         options: [
-          { text: "Patient reports retrosternal chest tightness radiating to the left arm; rating pain severity on a 0-10 scale.", isCorrect: true },
-          { text: "Chief complaint of substernal pressure; initiating rapid cardiac assessment.", isCorrect: true },
-          { text: "Told patient it is just mild indigestion and advised them to drink water.", isCorrect: false, reason: "Dangerous clinical oversight trap." },
-          { text: "Prescribed immediate intravenous morphine without physician order.", isCorrect: false, reason: "Scope of practice violation trap." }
+          { text: "Patient reports crushing retrosternal chest tightness with radiation to the left upper extremity.", isCorrect: true },
+          { text: "Chief complaint of substernal pressure; initiating rapid cardiac assessment and ECG monitoring.", isCorrect: true },
+          { text: "Told patient it is routine muscle fatigue and advised stretching exercises.", isCorrect: false, reason: "Dangerous clinical oversight trap." },
+          { text: "Administered unprescribed narcotics without physician order.", isCorrect: false, reason: "Scope of practice violation trap." }
         ]
       },
       {
         id: 2,
         moduleGroup: "1",
         moduleTitle: "Module 2: Vital Signs & Decompensation",
-        visual: "Post-op ward. Nurse takes vital monitor readings.",
-        speakerA: "Head Nurse",
-        lineA: "Bed 4's numbers just took a dip—his heart is racing at 128 and his blood pressure dropped to 82 over 50.",
-        speakerB: "Staff Nurse Action Challenge",
-        lineB: "What is the correct formal clinical escalation step for this vital sign decompensation?",
+        visual: "Step-down unit monitor displaying HR 128 bpm, BP 82/50 mmHg.",
+        part1: { speaker: "Head Nurse (Clinical Shorthand)", text: "Bed 4's numbers just crashed—his heart is racing at 128 and his blood pressure dipped to 82 over 50!" },
+        part2: { speaker: "Staff Nurse Reply", text: "Should I re-check the cuff manually right now and grab an oxygen mask?" },
+        part3: { speaker: "Head Nurse", text: "Yes! Verify manually and get the doctor on the phone stat." },
         howTo: "Step 3 Harm Safety: Verify automated readings manually and escalate immediately via ISBAR.",
         options: [
           { text: "Initiate high-flow oxygen via non-rebreather mask and notify attending physician stat.", isCorrect: true },
@@ -310,10 +324,9 @@
         moduleGroup: "1",
         moduleTitle: "Module 3: Nursing Care Plan Goals",
         visual: "Nursing station handover room.",
-        speakerA: "Incoming Nurse",
-        lineA: "Can you hear him rattling when he breathes? He can't clear out all that thick phlegm from his lungs.",
-        speakerB: "Care Plan Formulation Challenge",
-        lineB: "How should the nurse formally document this nursing diagnosis and intervention goal?",
+        part1: { speaker: "Incoming Nurse (Colloquial Report)", text: "Listen to his chest rattle! He can't clear out all that thick gunk from his lungs." },
+        part2: { speaker: "Care Plan Nurse", text: "What should we formulate as our primary NANDA diagnosis for his chart?" },
+        part3: { speaker: "Nurse Supervisor", text: "Focus on retained tracheobronchial secretions and airway clearance." },
         howTo: "Step 2 Mechanism: Formulate NANDA diagnosis: Ineffective Airway Clearance related to retained secretions.",
         options: [
           { text: "Nursing Diagnosis: Ineffective Airway Clearance related to retained bronchial secretions as evidenced by coarse rhonchi.", isCorrect: true },
@@ -327,10 +340,9 @@
         moduleGroup: "1",
         moduleTitle: "Module 4: ISBAR Physician Consult",
         visual: "Central workstation. Nurse on phone with attending physician.",
-        speakerA: "Attending Doctor",
-        lineA: "Nurse Sarah, what is happening with Mr. Roberts in Bed 7?",
-        speakerB: "ISBAR Escalation Challenge",
-        lineB: "How should Nurse Sarah structure this ISBAR physician consultation?",
+        part1: { speaker: "Attending Doctor (ISBAR Inquiry)", text: "Nurse Sarah, give me the situation on Mr. Roberts in Bed 7. Why are you calling me?" },
+        part2: { speaker: "Nurse Sarah", text: "Situation: Acute surgical bleeding. Background: Post-op Day 1. Assessment: BP 85/55, saturated dressing." },
+        part3: { speaker: "Attending Doctor", text: "Understood. What is your recommendation?" },
         howTo: "Step 2 Mechanism: Deliver structured ISBAR report highlighting active hemorrhage and vital drop.",
         options: [
           { text: "Situation: Acute surgical site bleeding with hypotension. Background: Post-op Day 1. Assessment: BP 85/55, HR 118, saturated dressing.", isCorrect: true },
@@ -342,34 +354,32 @@
       {
         id: 5,
         moduleGroup: "1",
-        moduleTitle: "Module 5: Medication Administration Safety",
-        visual: "Bedside medication cart. Patient hesitating to take morning pill.",
-        speakerA: "Patient",
-        lineA: "I really don't want to take that pill today—it makes me feel dizzy every single time.",
-        speakerB: "Therapeutic Response Challenge",
-        lineB: "How should the nurse professionally handle this medication refusal and side effect report?",
-        howTo: "Step 3 Harm Safety: Acknowledge concern, hold dose if hypotensive, and notify physician.",
+        moduleTitle: "Module 5: Medication Safety & Pharmacist Alert",
+        visual: "Central pharmacy window. Clinical pharmacist calling nurse.",
+        part1: { speaker: "Clinical Pharmacist (Drug Interaction Alert)", text: "Nurse, hold that new blood pressure prescription! It duplicates his home medication and could cause severe hypotension." },
+        part2: { speaker: "Staff Nurse", text: "Thank you for catching that! I will verify the eMAR right away." },
+        part3: { speaker: "Clinical Pharmacist", text: "Please clarify the order directly with the attending prescriber." },
+        howTo: "Step 3 Harm Safety: Cross-verify eMAR, hold duplicate medication, and contact prescriber.",
         options: [
-          { text: "Acknowledge patient concern regarding dizziness, hold the dose, re-check blood pressure, and notify physician.", isCorrect: true },
-          { text: "Document patient medication refusal secondary to reported dizziness in eMAR.", isCorrect: true },
-          { text: "Force patient to swallow pill immediately without checking blood pressure.", isCorrect: false, reason: "Coercive medication violation trap." },
-          { text: "Discard pill in trash without documenting refusal.", isCorrect: false, reason: "Documentation falsification trap." }
+          { text: "Acknowledge pharmacist warning, withhold medication dose, and clarify prescription order with attending physician.", isCorrect: true },
+          { text: "Document pharmacist intervention and medication order clarification in the patient's eMAR.", isCorrect: true },
+          { text: "Ignore pharmacist warning and force patient to ingest duplicate pills.", isCorrect: false, reason: "Medication overdose hazard trap." },
+          { text: "Discard all pharmacy stock into hospital waste.", isCorrect: false, reason: "Inappropriate pharmacy violation trap." }
         ]
       },
       {
         id: 6,
         moduleGroup: "6",
-        moduleTitle: "Module 6: Delivering Treatments & Dressings",
+        moduleTitle: "Module 6: Treatments & Wound Care",
         visual: "Treatment tray set with sterile gloves and saline wipes.",
-        speakerA: "Patient",
-        lineA: "Is this cold wipe going to sting my surgical cut when you clean it?",
-        speakerB: "Pre-Procedural Explanation Challenge",
-        lineB: "How should the nurse explain this sterile dressing change procedure?",
-        howTo: "Step 2 Mechanism: Cleanse wound bed using aseptic technique and inform patient of mild antiseptic stinging.",
+        part1: { speaker: "Anxious Family Member", text: "Is this cold wipe going to sting his fresh surgical cut when you clean it up?" },
+        part2: { speaker: "Staff Nurse", text: "It might cause a mild antiseptic sting, but I will use gentle aseptic technique." },
+        part3: { speaker: "Family Member", text: "Thank you for explaining it so clearly." },
+        howTo: "Step 2 Mechanism: Cleanse wound bed using aseptic technique and inform family of mild antiseptic stinging.",
         options: [
           { text: "Explain that antiseptic solution may cause mild transient stinging, and instruct patient to report sharp pain.", isCorrect: true },
           { text: "Perform sterile dressing change using aseptic technique from inner wound margin outward.", isCorrect: true },
-          { text: "Tell patient to apply unwashed tap water directly into open incision.", isCorrect: false, reason: "Infection contamination hazard trap." },
+          { text: "Tell family to apply unwashed tap water directly into open incision.", isCorrect: false, reason: "Infection contamination hazard trap." },
           { text: "Skip hand hygiene and touch wound with unsterile bare hands.", isCorrect: false, reason: "Severe infection control breach trap." }
         ]
       },
@@ -378,10 +388,9 @@
         moduleGroup: "6",
         moduleTitle: "Module 7: Patient Observation & Evaluation",
         visual: "Bedside evaluation during shift walkthrough.",
-        speakerA: "Patient",
-        lineA: "My breathing feels a whole lot easier now with this extra oxygen, nurse!",
-        speakerB: "Clinical Evaluation Challenge",
-        lineB: "How should the nurse formally evaluate and document this positive patient response?",
+        part1: { speaker: "Patient (Relieved Expression)", text: "My breathing feels a whole lot easier now with this extra oxygen, nurse!" },
+        part2: { speaker: "Staff Nurse", text: "That is wonderful to hear. Let me listen to your breath sounds to confirm." },
+        part3: { speaker: "Patient", text: "The tightness in my chest has completely gone away." },
         howTo: "Step 4 Completion: Auscultate lung fields, verify SpO2 stabilization, and chart outcome in EHR.",
         options: [
           { text: "Auscultation confirms clearer lung fields bilaterally and SpO2 stabilized at 97% on ambient air.", isCorrect: true },
@@ -395,10 +404,9 @@
         moduleGroup: "6",
         moduleTitle: "Module 8: HR & Administrative Communication",
         visual: "Unit supervisor office. Nurse reviewing shift roster.",
-        speakerA: "Nurse",
-        lineA: "I was wondering if I could switch my Friday night shift with David next week for a family event?",
-        speakerB: "Administrative Response Challenge",
-        lineB: "What is the correct formal administrative procedure for processing this shift exchange?",
+        part1: { speaker: "Staff Nurse (Shift Request)", text: "I was wondering if I could switch my Friday night shift with David next week for a family event?" },
+        part2: { speaker: "Head Nurse", text: "Have you both filled out the official shift swap application form?" },
+        part3: { speaker: "Staff Nurse", text: "Yes, we signed it together this morning." },
         howTo: "Step 4 Completion: Fill out shift swap application and submit to Head Nurse for final approval.",
         options: [
           { text: "Instruct nurse to submit formal shift rotation swap request countersigned by Nurse David prior to deadline.", isCorrect: true },
@@ -410,12 +418,11 @@
       {
         id: 9,
         moduleGroup: "6",
-        moduleTitle: "Module 9: Pediatric & Family Care",
+        moduleTitle: "Module 9: Pediatric Fever Care",
         visual: "Pediatric ward. Mother holding febrile toddler.",
-        speakerA: "Mother",
-        lineA: "He has had a high fever since last night, around 39 degrees, and he won't take his bottle at all.",
-        speakerB: "Pediatric Assessment Challenge",
-        lineB: "How should the nurse clinically document and manage this pediatric fever and dehydration risk?",
+        part1: { speaker: "Worried Mother", text: "He has had a high fever since last night, around 39 degrees, and he won't take his bottle at all." },
+        part2: { speaker: "Pediatric Nurse", text: "Let's measure his exact weight so we can calculate a safe paracetamol dose." },
+        part3: { speaker: "Worried Mother", text: "Please help him bring that fever down quickly." },
         howTo: "Step 3 Harm Safety: Double-check weight-based paracetamol dosage to prevent overdose.",
         options: [
           { text: "Document acute pediatric pyrexia (39.0°C) secondary to poor oral intake and dehydration risk.", isCorrect: true },
@@ -429,10 +436,9 @@
         moduleGroup: "6",
         moduleTitle: "Module 10: Critical Care & Code Calls",
         visual: "ICU room. Cardiac monitor displaying alarming flatline rhythm.",
-        speakerA: "Primary Nurse",
-        lineA: "Call a Code Rapid Response for Room 210 right now! He's stopped breathing and has no pulse!",
-        speakerB: "Resuscitation Team Leader Challenge",
-        lineB: "What is the immediate formal execution step for this critical care code activation?",
+        part1: { speaker: "Primary Nurse (Panic Call)", text: "Call a Code Rapid Response for Room 210 right now! He's stopped breathing and has no pulse!" },
+        part2: { speaker: "ICU Resuscitation Lead", text: "Crash cart is here. Who is initiating chest compressions?" },
+        part3: { speaker: "Primary Nurse", text: "I am starting chest compressions right now!" },
         howTo: "Step 2 Mechanism: Initiate high-quality chest compressions and execute closed-loop communication.",
         options: [
           { text: "Initiate high-quality chest compressions at 100-120 bpm and bring crash cart and defibrillator.", isCorrect: true },
@@ -446,10 +452,9 @@
         moduleGroup: "11",
         moduleTitle: "Module 11: Infection Control & Isolation",
         visual: "Isolation anteroom with PPE donning station.",
-        speakerA: "Visitor",
-        lineA: "Do I really need to put on this yellow gown and N95 mask just to step inside his room?",
-        speakerB: "Infection Control Education Challenge",
-        lineB: "How should the nurse formally explain transmission-based isolation precautions to the visitor?",
+        part1: { speaker: "Confused Visitor", text: "Do I really need to put on this yellow gown and N95 mask just to step inside his room?" },
+        part2: { speaker: "Infection Control Nurse", text: "Yes, airborne precautions protect you and other patients from infection." },
+        part3: { speaker: "Confused Visitor", text: "Okay, please show me how to put the mask on properly." },
         howTo: "Step 3 Harm Safety: Ensure N95 seal check and strict gown/gloves donning to prevent pathogen spread.",
         options: [
           { text: "Explain that airborne/contact precautions require hand hygiene and PPE donning prior to room entry.", isCorrect: true },
@@ -463,10 +468,9 @@
         moduleGroup: "12",
         moduleTitle: "Module 12: Discharge Planning",
         visual: "Bedside discharge consultation with printed folder.",
-        speakerA: "Patient",
-        lineA: "When can I drive my car again, and what warning signs should make me call the clinic?",
-        speakerB: "Discharge Education Challenge",
-        lineB: "How should the nurse structure this final discharge instruction review?",
+        part1: { speaker: "Patient", text: "When can I drive my car again, and what warning signs should make me call the clinic?" },
+        part2: { speaker: "Discharge Nurse", text: "Here is your printed folder with all the driving timelines and red-flag symptoms." },
+        part3: { speaker: "Patient", text: "Thank you, I understand when to call the clinic now." },
         howTo: "Step 4 Completion: Review wound care, activity limits, and red-flag symptoms in discharge folder.",
         options: [
           { text: "Provide written discharge instructions detailing incisional wound care, activity restrictions, and driving timelines.", isCorrect: true },
@@ -480,10 +484,9 @@
         moduleGroup: "13",
         moduleTitle: "Module 13: Perioperative Care",
         visual: "Pre-op holding bay with knee surgical mark.",
-        speakerA: "Anesthesiologist",
-        lineA: "Nurse, has the patient maintained strict NPO status and is the correct operative limb marked?",
-        speakerB: "Pre-op Verification Challenge",
-        lineB: "How should the nurse formally report pre-operative verification status?",
+        part1: { speaker: "Anesthesiologist", text: "Nurse, has the patient maintained strict NPO status and is the correct operative limb marked?" },
+        part2: { speaker: "Pre-op Nurse", text: "Yes, NPO since midnight and the right knee site is initialed and verified." },
+        part3: { speaker: "Anesthesiologist", text: "Perfect, we are ready for OR transfer." },
         howTo: "Step 2 Mechanism: Verify identity, NPO fasting duration, and correct surgical site marking.",
         options: [
           { text: "Confirm strict NPO status since midnight, signed surgical consent, and verified right knee site mark.", isCorrect: true },
@@ -497,10 +500,9 @@
         moduleGroup: "14",
         moduleTitle: "Module 14: Mental Health Care",
         visual: "Quiet consultation room in inpatient psychiatric unit.",
-        speakerA: "Patient",
-        lineA: "Nobody listens to me! Sometimes I just feel like people wouldn't miss me if I was gone.",
-        speakerB: "Mental Health Assessment Challenge",
-        lineB: "How should the nurse formally assess and document this expression of suicidal ideation?",
+        part1: { speaker: "Patient", text: "Nobody listens to me! Sometimes I just feel like people wouldn't miss me if I was gone." },
+        part2: { speaker: "Psychiatric Nurse", text: "I am listening to you, and your safety is my top priority right now." },
+        part3: { speaker: "Patient", text: "I promise I won't hurt myself today." },
         howTo: "Step 3 Harm Safety: Implement 1-to-1 direct observation and remove hazardous items.",
         options: [
           { text: "Assess active suicidal ideation with plan and initiate one-to-one direct observation safety status.", isCorrect: true },
@@ -514,10 +516,9 @@
         moduleGroup: "15",
         moduleTitle: "Module 15: Oncology Care",
         visual: "Outpatient infusion suite with chemotherapy pump running.",
-        speakerA: "Patient",
-        lineA: "It feels a little cold going in, but I'll tell you right away if it starts burning or stinging.",
-        speakerB: "Chemotherapy Monitoring Challenge",
-        lineB: "How should the nurse monitor this vesicant chemotherapy infusion?",
+        part1: { speaker: "Oncology Patient", text: "It feels a little cold going in, but I'll tell you right away if it starts burning or stinging." },
+        part2: { speaker: "Oncology Nurse", text: "Very good. Keep a close eye on the IV insertion site for any discomfort." },
+        part3: { speaker: "Oncology Patient", text: "I appreciate your vigilance during my treatment." },
         howTo: "Step 3 Harm Safety: Stop infusion immediately upon patient report of burning or swelling.",
         options: [
           { text: "Monitor venous access patency continuously and instruct patient to report immediate burning or pain.", isCorrect: true },
@@ -531,10 +532,9 @@
         moduleGroup: "16",
         moduleTitle: "Module 16: Emergency Triage",
         visual: "ER Trauma Bay 1. Paramedics rolling in stretcher.",
-        speakerA: "Paramedic",
-        lineA: "Trauma handover: 35-year-old car crash victim, GCS 10, BP 80 over 50, right leg deformity.",
-        speakerB: "Trauma Team Leader Challenge",
-        lineB: "What is the correct primary survey and resuscitation execution step?",
+        part1: { speaker: "Paramedic Handoff", text: "Trauma handover: 35-year-old car crash victim, GCS 10, BP 80 over 50, right leg deformity." },
+        part2: { speaker: "Trauma Team Leader", text: "Let's initiate our primary survey and get two large-bore IVs started." },
+        part3: { speaker: "ER Nurse", text: "IV lines secured and blood warmer is running." },
         howTo: "Step 2 Mechanism: Perform primary survey (ABCDE), establish large-bore IV access, and prepare MTP.",
         options: [
           { text: "Execute primary trauma survey (Airway, Breathing, Circulation) and establish two large-bore IV lines.", isCorrect: true },
@@ -548,10 +548,9 @@
         moduleGroup: "17",
         moduleTitle: "Module 17: Community Health",
         visual: "Community health clinic vaccination desk.",
-        speakerA: "Parent",
-        lineA: "Will she get a fever after these booster shots, and why is public health tracing contacts from my workplace?",
-        speakerB: "Public Health Counseling Challenge",
-        lineB: "How should the public health nurse formally educate and counsel this parent?",
+        part1: { speaker: "Anxious Parent", text: "Will she get a fever after these booster shots, and why is public health tracing contacts from my workplace?" },
+        part2: { speaker: "Public Health Nurse", text: "Mild pyrexia is normal, and contact tracing helps contain community spread." },
+        part3: { speaker: "Anxious Parent", text: "Thank you for explaining the public health guidelines." },
         howTo: "Step 4 Completion: Explain post-vaccine pyrexia care and document communicable disease tracing.",
         options: [
           { text: "Counsel parent regarding expected mild post-vaccination pyrexia and paracetamol dosage instructions.", isCorrect: true },
@@ -565,10 +564,9 @@
         moduleGroup: "18",
         moduleTitle: "Module 18: Home Healthcare Management",
         visual: "Home living room. Nurse evaluating sacral wound.",
-        speakerA: "Caregiver",
-        lineA: "His back wound looks less red today, but should we keep turning him every two hours?",
-        speakerB: "Home Care Coaching Challenge",
-        lineB: "How should the home health nurse formally guide this family caregiver?",
+        part1: { speaker: "Family Caregiver", text: "My lower back feels less tender today, but should we keep propping those pillows behind his back?" },
+        part2: { speaker: "Home Health Nurse", text: "Yes, maintaining the 2-hour lateral turning schedule is essential for healing." },
+        part3: { speaker: "Family Caregiver", text: "We will keep up with the turning schedule strictly." },
         howTo: "Step 3 Harm Safety: Reinforce 2-hour lateral turning schedule to prevent pressure injury progression.",
         options: [
           { text: "Reinforce caregiver education on 2-hour lateral repositioning schedule to relieve sacral pressure.", isCorrect: true },
@@ -582,10 +580,9 @@
         moduleGroup: "19",
         moduleTitle: "Module 19: Geriatric Nursing & Cognitive Care",
         visual: "Long-term care facility dayroom.",
-        speakerA: "Resident",
-        lineA: "I need to catch the bus to work! Wait, am I all done? A hot cup of tea sounds lovely.",
-        speakerB: "Geriatric Reassurance Challenge",
-        lineB: "How should the nurse respond to this sundowning confusion and manage fall safety?",
+        part1: { speaker: "Elderly Resident", text: "Oh dear, I'm going to be late for the bus to work! Wait, am I all done? A hot cup of tea sounds so nice." },
+        part2: { speaker: "Geriatric Nurse", text: "You are retired now, Mary. Let's sit together and enjoy some warm tea." },
+        part3: { speaker: "Elderly Resident", text: "That sounds wonderful, thank you dear." },
         howTo: "Step 2 Mechanism: Provide reality orientation at eye level, offer warm tea, and ensure bed alarm is active.",
         options: [
           { text: "Provide calm reality orientation at eye level, validate feelings, and offer warm tea to redirect sundowning agitation.", isCorrect: true },
@@ -599,10 +596,9 @@
         moduleGroup: "20",
         moduleTitle: "Module 20: Palliative & End-of-Life Care",
         visual: "Hospice private room with soft lighting.",
-        speakerA: "Family Member",
-        lineA: "Is he suffering? Why is his breathing speeding up and slowing down in that strange pattern?",
-        speakerB: "Palliative Education Challenge",
-        lineB: "How should the palliative care nurse compassionately educate and reassure this family?",
+        part1: { speaker: "Grieving Family Member", text: "Is he suffering? Why is his breathing speeding up and slowing down in that strange pattern?" },
+        part2: { speaker: "Hospice Nurse", text: "That is called Cheyne-Stokes breathing, and he is receiving continuous comfort medication." },
+        part3: { speaker: "Grieving Family Member", text: "Knowing he is pain-free brings us so much peace." },
         howTo: "Step 3 Harm Safety: Reassure family regarding Cheyne-Stokes respirations and maintain comfort meds.",
         options: [
           { text: "Reassure family that Cheyne-Stokes respiration is a natural physiological process at end of life.", isCorrect: true },
@@ -617,7 +613,7 @@
     let currentScore = 0;
     let currentStreak = 0;
     let currentScenarioIndex = 0;
-    let filteredScenarios = [...conversationScenarios];
+    let filteredScenarios = [...randomizedScenarios];
     let selectedIndices = new Set();
 
     // --- DOM ELEMENTS ---
@@ -626,10 +622,12 @@
     const caseProgressDisplay = document.getElementById('caseProgressDisplay');
     const badgeCategory = document.getElementById('badgeCategory');
     const visualDescription = document.getElementById('visualDescription');
-    const speakerATitle = document.getElementById('speakerATitle');
-    const speakerALine = document.getElementById('speakerALine');
-    const speakerBTitle = document.getElementById('speakerBTitle');
-    const speakerBLine = document.getElementById('speakerBLine');
+    const part1Title = document.getElementById('part1Title');
+    const part1Text = document.getElementById('part1Text');
+    const part2Title = document.getElementById('part2Title');
+    const part2Text = document.getElementById('part2Text');
+    const part3Title = document.getElementById('part3Title');
+    const part3Text = document.getElementById('part3Text');
     const speakDialogueBtn = document.getElementById('speakDialogueBtn');
     const proceduralStepText = document.getElementById('proceduralStepText');
     const speakHowToBtn = document.getElementById('speakHowToBtn');
@@ -659,9 +657,9 @@
     function filterScenarios() {
       const val = moduleSelect.value;
       if (val === 'all') {
-        filteredScenarios = [...conversationScenarios];
+        filteredScenarios = [...randomizedScenarios];
       } else {
-        filteredScenarios = conversationScenarios.filter(s => s.moduleGroup === val);
+        filteredScenarios = randomizedScenarios.filter(s => s.moduleGroup === val);
       }
       currentScenarioIndex = 0;
     }
@@ -685,18 +683,26 @@
 
       badgeCategory.textContent = sc.moduleTitle;
       visualDescription.textContent = `📷 Setting: ${sc.visual}`;
-      speakerATitle.textContent = sc.speakerA;
-      speakerALine.textContent = `"${sc.lineA}"`;
-      speakerBTitle.textContent = sc.speakerB;
-      speakerBLine.textContent = `"${sc.lineB}"`;
+      
+      part1Title.textContent = sc.part1.speaker;
+      part1Text.textContent = `"${sc.part1.text}"`;
+      part2Title.textContent = sc.part2.speaker;
+      part2Text.textContent = `"${sc.part2.text}"`;
+      part3Title.textContent = sc.part3.speaker;
+      part3Text.textContent = `"${sc.part3.text}"`;
+
       proceduralStepText.textContent = sc.howTo;
 
-      // Auto-speak dialogue exchange with Male Voice
-      tts.speak(`${sc.speakerA} says: ${sc.lineA}`, 'male');
+      // Auto-speak full 3-part exchange with Male Voice
+      const fullExchange = `${sc.part1.speaker} says: ${sc.part1.text}. ${sc.part2.speaker} replies: ${sc.part2.text}. ${sc.part3.speaker} adds: ${sc.part3.text}`;
+      tts.speak(fullExchange, 'male');
+
+      // Randomize Options
+      const randomizedOptions = shuffleArray(sc.options);
 
       // Render Options (Female Voice)
       optionsContainer.innerHTML = '';
-      sc.options.forEach((opt, optIdx) => {
+      randomizedOptions.forEach((opt, optIdx) => {
         const card = document.createElement('div');
         card.className = `option-card bg-slate-900/90 border-2 border-slate-700 hover:border-amber-400/80 p-4 rounded-xl cursor-pointer transition flex items-center justify-between gap-3 text-slate-200 select-none group`;
         card.dataset.index = optIdx;
@@ -715,10 +721,14 @@
 
         card.addEventListener('click', (e) => {
           if (!e.target.closest('.tts-opt-btn')) {
-            toggleOptionSelect(optIdx, card);
+            toggleOptionSelect(optIdx, card, opt.isCorrect);
             tts.speak(opt.text, 'female');
           }
         });
+
+        // Store correctness status on the card element dataset for evaluation
+        card.dataset.isCorrect = opt.isCorrect ? "true" : "false";
+        card.dataset.reason = opt.reason || "";
 
         const ttsBtn = card.querySelector('.tts-opt-btn');
         ttsBtn.addEventListener('click', (e) => {
@@ -732,7 +742,7 @@
       updateHeaderStats();
     }
 
-    function toggleOptionSelect(index, cardElement) {
+    function toggleOptionSelect(index, cardElement, isCorrect) {
       const checkbox = cardElement.querySelector('.checkbox-box');
       const checkMark = cardElement.querySelector('.check-mark');
 
@@ -753,18 +763,22 @@
 
     // --- EVALUATION & SCORING LOGIC (+100 / -100) ---
     submitBtn.addEventListener('click', () => {
-      const sc = filteredScenarios[currentScenarioIndex];
+      const cards = optionsContainer.querySelectorAll('.option-card');
       let isPerfect = true;
       let mistakes = [];
 
-      sc.options.forEach((opt, idx) => {
+      cards.forEach((card, idx) => {
         const wasSelected = selectedIndices.has(idx);
-        if (opt.isCorrect && !wasSelected) {
+        const isCorrect = card.dataset.isCorrect === "true";
+        const reason = card.dataset.reason;
+        const text = card.querySelector('span.font-semibold').textContent;
+
+        if (isCorrect && !wasSelected) {
           isPerfect = false;
-          mistakes.push(`Missed valid formal response: "${opt.text}"`);
-        } else if (!opt.isCorrect && wasSelected) {
+          mistakes.push(`Missed valid formal response: "${text}"`);
+        } else if (!isCorrect && wasSelected) {
           isPerfect = false;
-          mistakes.push(`Selected distractor trap: "${opt.text}" (${opt.reason})`);
+          mistakes.push(`Selected distractor trap: "${text}" (${reason})`);
         }
       });
 
@@ -783,7 +797,7 @@
 
         feedbackBanner.className = "p-4 rounded-xl border border-emerald-500/80 bg-emerald-950/90 text-emerald-200 text-center shadow-xl";
         feedbackText.innerHTML = `🎉 PERFECT DIALOGUE & PROCEDURE MATCH! (+100 SCORE)`;
-        feedbackSubtext.textContent = "You correctly answered the conversation exchange and applied proper 'How-To' clinical procedures!";
+        feedbackSubtext.textContent = "You correctly answered the randomized conversation exchange and applied proper 'How-To' clinical procedures!";
 
       } else {
         currentScore -= 100;
@@ -810,7 +824,8 @@
     // Voice Replay Listeners
     speakDialogueBtn.addEventListener('click', () => {
       const sc = filteredScenarios[currentScenarioIndex];
-      tts.speak(`${sc.speakerA} says: ${sc.lineA}`, 'male');
+      const fullExchange = `${sc.part1.speaker} says: ${sc.part1.text}. ${sc.part2.speaker} replies: ${sc.part2.text}. ${sc.part3.speaker} adds: ${sc.part3.text}`;
+      tts.speak(fullExchange, 'male');
     });
 
     speakHowToBtn.addEventListener('click', () => {
@@ -832,17 +847,18 @@
 
     function showFinalVictoryScreen() {
       optionsContainer.innerHTML = '';
-      speakerALine.textContent = "🏆 BEDSIDE DIALOGUE & PROCEDURE CHALLENGE COMPLETED!";
-      speakerBLine.textContent = "20-Module Conversational & Procedural Mastery Achieved";
-      visualDescription.textContent = "All Clinical Scenarios Successfully Mastered";
+      part1Text.textContent = "🏆 RANDOMIZED STAKEHOLDER CHALLENGE COMPLETED!";
+      part2Text.textContent = "20-Module Conversational & Procedural Mastery Achieved";
+      part3Text.textContent = "All Randomized Clinical Scenarios Successfully Mastered";
+      visualDescription.textContent = "Curriculum Mastered Successfully";
 
-      tts.speak("Congratulations! You have completed the Bedside Dialogue and Procedure Challenge.", 'female');
+      tts.speak("Congratulations! You have completed the Randomized Multi-Stakeholder Dialogue Challenge.", 'female');
 
       feedbackBanner.classList.remove('hidden');
       feedbackBanner.className = "p-6 rounded-2xl border border-amber-500/80 bg-slate-900/95 text-amber-300 text-center shadow-2xl space-y-3";
       feedbackText.innerHTML = `FINAL CHALLENGE SCORE: ${currentScore} POINTS`;
       feedbackSubtext.innerHTML = `
-        <p class="text-sm text-slate-300">You have successfully mastered real bedside conversations and clinical "How-To" procedures across all 20 scenarios!</p>
+        <p class="text-sm text-slate-300">You have successfully mastered multi-stakeholder hospital conversations and clinical procedures across all 20 randomized scenarios!</p>
         <p class="text-xs text-amber-400 font-bold">Curriculum & Pedagogical Framework © Giyono Asfarrasyid</p>
       `;
       nextScenarioBtn.style.display = 'none';
